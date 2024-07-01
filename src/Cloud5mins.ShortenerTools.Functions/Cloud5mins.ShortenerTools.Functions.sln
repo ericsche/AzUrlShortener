@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cloud5mins.ShortenerTools.Functions", "Cloud5mins.ShortenerTools.Functions.csproj", "{15775306-4298-4825-8A3B-2CFE1A96B60C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15775306-4298-4825-8A3B-2CFE1A96B60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15775306-4298-4825-8A3B-2CFE1A96B60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15775306-4298-4825-8A3B-2CFE1A96B60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15775306-4298-4825-8A3B-2CFE1A96B60C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E651863-0E6A-471B-9742-2E4E38C05FF1}
+	EndGlobalSection
+EndGlobal
