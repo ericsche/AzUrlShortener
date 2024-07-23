@@ -35,7 +35,7 @@ namespace Cloud5mins.ShortenerTools.Functions
 
                 StorageTableHelper stgHelper = new StorageTableHelper(_settings.DataStorage);
 
-                var tempUrl = new ShortUrlEntity(string.Empty, shortUrl);
+                var tempUrl = new ShortUrlEntity(string.Empty, shortUrl.ToLower());
                 var newUrl = await stgHelper.GetShortUrlEntity(tempUrl);
 
                 if (newUrl != null)
@@ -57,5 +57,6 @@ namespace Cloud5mins.ShortenerTools.Functions
             return res;
 
         }
+
     }
 }
