@@ -22,9 +22,13 @@ It was consolidated from
      `https://contoso.sharepoint.com`
 4. In `config/package-solution.json`, make sure the resource name matches the
    Entra enterprise application's display name.
-5. Replace `api://REPLACE-WITH-API-CLIENT-ID` in
-   `src/webparts/shortUrl/ShortUrlWebPart.manifest.json` with the API Application
-   ID URI and set the deployed API URL.
+5. Set the deployed API URL and Application ID URI in
+   `src/webparts/shortUrl/ApiConfiguration.ts`.
+
+The API URL and resource URI are deliberately compiled into the bundle as one
+trusted pair. Do not expose either value through web part properties: a page
+editor could otherwise redirect an administrator's bearer token to another
+origin.
 
 After the `.sppkg` is deployed, approve the pending `access_as_user` API
 permission in the SharePoint admin center.

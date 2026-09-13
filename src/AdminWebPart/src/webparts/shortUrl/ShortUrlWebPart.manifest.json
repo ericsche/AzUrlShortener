@@ -21,9 +21,6 @@
     "title": { "default": "ShortUrl" },
     "description": { "default": "ShortUrl description" },
     "officeFabricIconFontName": "Page",
-    "properties": {
-      "apiBaseUrl": "https://amvcc-urlshortnerv2.azurewebsites.net",
-      "apiResourceUri": "api://REPLACE-WITH-API-CLIENT-ID"
-    }
+    "properties": {}
   }]
 }
