@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "short-url-adm-client-side-solution",
+    "name": "short-url-v2-client-side-solution",
     "id": "8ac5879e-b43b-4cd3-8fda-ad9a31110a08",
-    "version": "1.1.0.0",
+    "version": "1.1.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -16,7 +16,7 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "Administration des liens courts AMVCC"
+        "default": "ShortUrlV2 - Administration AMVCC"
       },
       "longDescription": {
         "default": "Webpart SharePoint et onglet Teams pour administrer les liens courts AMVCC."
@@ -27,8 +27,8 @@
     },
     "features": [
       {
-        "title": "Administration des liens courts",
-        "description": "Active le webpart d’administration AzUrlShortener.",
+        "title": "ShortUrlV2",
+        "description": "Active le webpart ShortUrlV2 d’administration AzUrlShortener.",
         "id": "0c36b980-4067-4154-accf-f6d2e612bc8c",
         "version": "1.0.0.0"
       }
