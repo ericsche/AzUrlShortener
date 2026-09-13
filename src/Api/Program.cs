@@ -14,7 +14,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("UrlAdmin", policy =>
     {
         policy.RequireAuthenticatedUser();
-        policy.RequireRole(builder.Configuration["Authorization:AdminRole"] ?? "UrlAdmin");
+        policy.RequireRole(builder.Configuration["Authorization:AdminRole"] ?? "admin");
         policy.RequireScope("access_as_user");
     });
 });

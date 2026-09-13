@@ -8,10 +8,10 @@ The SharePoint Framework web part uses `AadHttpClient` to obtain a delegated
 access token for the signed-in SharePoint or Teams user. The API requires:
 
 - the `access_as_user` delegated scope;
-- the `UrlAdmin` app role;
+- the `admin` app role;
 - an allowed SharePoint origin configured through CORS.
 
-Assign `UrlAdmin` to a security or Microsoft 365 group. Distribution lists do
+Assign `admin` to a security or Microsoft 365 group. Distribution lists do
 not emit the `roles` claim and will result in HTTP 403 responses.
 
 Never embed a Function key, client secret, or bearer token in the SPFx bundle.

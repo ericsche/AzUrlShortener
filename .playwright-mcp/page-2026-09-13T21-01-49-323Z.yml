@@ -1,0 +1,30 @@
+- generic [ref=e5]:
+  - img "Organization background image" [ref=e6]
+  - generic [ref=e8]:
+    - generic [ref=e14]:
+      - img "Microsoft" [ref=e17]
+      - main [ref=e18]:
+        - generic [ref=e21]:
+          - heading "Pick an account" [level=1] [ref=e25]
+          - list "Pick an account" [ref=e28]:
+            - listitem [ref=e30] [cursor=pointer]:
+              - button "Sign in with eric.scherlinger@amvcc.com work or school account." [active] [ref=e31]:
+                - generic [ref=e34]:
+                  - generic [ref=e35]: Eric Scherlinger
+                  - generic [ref=e36]: eric.scherlinger@amvcc.com
+                  - generic [ref=e37]: Connected to Windows
+            - listitem [ref=e39] [cursor=pointer]:
+              - button "Sign in with ericsche@microsoft.com work or school account." [ref=e40]:
+                - generic [ref=e43]:
+                  - generic [ref=e44]: Eric Scherlinger
+                  - generic [ref=e45]: ericsche@microsoft.com
+                  - generic [ref=e46]: Connected to Windows
+            - listitem [ref=e47] [cursor=pointer]:
+              - button "Use another account" [ref=e48]
+    - contentinfo [ref=e53]:
+      - generic [ref=e54]:
+        - link "Terms of use" [ref=e55] [cursor=pointer]:
+          - /url: https://www.microsoft.com/en-US/servicesagreement/
+        - link "Privacy & cookies" [ref=e56] [cursor=pointer]:
+          - /url: https://privacy.microsoft.com/en-US/privacystatement
+        - button "Click here for troubleshooting information" [ref=e57] [cursor=pointer]: ...

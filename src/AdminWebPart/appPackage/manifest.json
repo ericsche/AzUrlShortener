@@ -25,9 +25,9 @@
     "accentColor": "#004578",
     "staticTabs": [
         {
-            "entityId": "4bbafe50-8842-4630-b2fb-463334ac9d61",
+            "entityId": "a7f4fbc2-c9dd-4758-a09c-9c0464ff6b92",
             "name": "ShortUrlV2",
-            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=4bbafe50-8842-4630-b2fb-463334ac9d61%26forceLocale={locale}",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=a7f4fbc2-c9dd-4758-a09c-9c0464ff6b92%26forceLocale={locale}",
             "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
             "scopes": [
                 "personal"

@@ -7,7 +7,7 @@ make the operations anonymous.
 The API validates Microsoft Entra access tokens and requires both:
 
 - delegated scope `access_as_user`;
-- app role `UrlAdmin`.
+- app role `admin`.
 
 The deployment also restricts browser calls with CORS to
 `AZURE_SHAREPOINT_ORIGIN`, for example `https://contoso.sharepoint.com`.
