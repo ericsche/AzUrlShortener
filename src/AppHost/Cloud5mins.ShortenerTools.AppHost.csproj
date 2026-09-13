@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Api\Cloud5mins.ShortenerTools.Api.csproj" />
     <ProjectReference Include="..\FunctionsLight\Cloud5mins.ShortenerTools.FunctionsLight.csproj" />
   </ItemGroup>
 

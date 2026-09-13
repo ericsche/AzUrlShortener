@@ -10,5 +10,5 @@ Follow the instructions to add your custom domain. Note that it may takes a few 
 
 The administration interface is hosted by SharePoint, so it does not need a
 separate custom domain. If the administration API domain changes, update the
-web part's `apiBaseUrl` property and keep the SharePoint origin in the API CORS
-configuration.
+immutable URL in `src/AdminWebPart/src/webparts/shortUrl/ApiConfiguration.ts`
+and keep the SharePoint origin in the API CORS configuration.

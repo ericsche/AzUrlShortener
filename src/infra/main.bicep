@@ -14,9 +14,6 @@ param principalId string = ''
 
 param CustomDomain string
 param DefaultRedirectUrl string
-param EntraTenantId string
-param ApiClientId string
-param SharePointOrigin string
 
 var tags = {
   'azd-env-name': environmentName

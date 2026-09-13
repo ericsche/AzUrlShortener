@@ -1,8 +1,9 @@
 # Administration API security
 
-The administration API has public HTTPS ingress because the SharePoint
-Framework web part calls it from the user's browser. Public ingress does not
-make the operations anonymous.
+The administration API runs in the dedicated
+`amvcc-urlshort-admin-flex` Azure Function. It has public HTTPS ingress because
+the SharePoint Framework web part calls it from the user's browser. Public
+ingress does not make the operations anonymous.
 
 The API validates Microsoft Entra access tokens and requires both:
 

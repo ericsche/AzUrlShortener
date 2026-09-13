@@ -36,13 +36,14 @@ If you want to **Update** or **Upgrade**, please refer to [the faq page](doc/faq
 Administration is provided by the SharePoint Framework web part in
 [`src/AdminWebPart`](src/AdminWebPart/). It runs in SharePoint and as a personal
 tab in Microsoft Teams, using the signed-in user's Entra identity to call the
-protected administration API.
+protected [Functions Admin API](src/FunctionsAdmin/) hosted on Azure Functions
+Flex Consumption.
 
 
 ### Alternative Admin Tool
 
-By default, the redirect Function and protected administration API are deployed
-to Azure. The API requires an Entra access token carrying the `access_as_user`
+The redirect Function and protected administration Function are deployed
+separately. The administration API requires an Entra access token carrying the `access_as_user`
 scope and `UrlAdmin` app role. The included Postman collection can still be used
 when configured with a valid bearer token.
 

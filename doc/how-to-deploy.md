@@ -58,15 +58,20 @@ After a few seconds, you should now be in your version of the AzUrlShortener pro
 	You will be asked where to deploy Azure Subscription and location select what make sense for you. You will be asked two more information:
 	- **The Custom domain**: This should be the complete (including the https part) domain name for your short URLs ex: https://c5m.ca.
 	- **Default Redirect Url**: This is the URL used if the vanity doesn't exist, or if no vanity is used. It must include the https part.
-	- **Entra tenant ID**: Tenant containing the API registration and administrators.
-	- **API client ID**: Client ID of the Entra application exposing `access_as_user`.
-	- **SharePoint origin**: Tenant origin allowed by CORS, for example `https://contoso.sharepoint.com`.
 
 1. Get the application URL
 
-After deployment, `azd` displays the public redirect Function URL and the
-protected administration API URL. Configure that API URL and its Entra
-Application ID URI in the SPFx web part manifest.
+After deployment, `azd` displays the public redirect Function URL.
+
+Deploy the administration API separately on Flex Consumption:
+
+```powershell
+cd FunctionsAdmin
+.\Deploy-Flex.ps1
+```
+
+The ShortUrlV2 webpart is configured to call
+`https://amvcc-urlshort-admin-flex.azurewebsites.net`.
 
 ![azd deployment result](../images/deployment-result.png)
 

@@ -11,15 +11,6 @@
       "DefaultRedirectUrl": {
         "value": "${AZURE_DEFAULT_REDIRECT_URL}"
       },
-      "EntraTenantId": {
-        "value": "${AZURE_ENTRA_TENANT_ID}"
-      },
-      "ApiClientId": {
-        "value": "${AZURE_API_CLIENT_ID}"
-      },
-      "SharePointOrigin": {
-        "value": "${AZURE_SHAREPOINT_ORIGIN}"
-      },
       "environmentName": {
         "value": "${AZURE_ENV_NAME}"
       },
