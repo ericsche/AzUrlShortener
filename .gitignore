@@ -271,3 +271,6 @@ src/adminTools/adminBlazorWebsite/src/appsettings.Development.json
 
 #Igniore VSCode User Setting
 **/.vscode/settings.json
+
+# Local Playwright MCP artifacts
+.playwright-mcp/
