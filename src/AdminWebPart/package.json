@@ -14,7 +14,6 @@
     "start": "heft start --clean"
   },
   "dependencies": {
-    "@fluentui/react": "^8.106.4",
     "@fluentui/react-components": "^9.54.5",
     "@fluentui/react-icons": "^2.0.249",
     "@microsoft/sp-component-base": "1.23.2",

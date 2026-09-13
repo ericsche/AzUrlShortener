@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { getTheme } from '@fluentui/react';
 import {
   AddSquare24Regular,
   Archive24Regular,
@@ -29,6 +28,7 @@ import {
   TableRow,
   Toolbar,
   ToolbarButton,
+  tokens,
   webDarkTheme,
   webLightTheme
 } from '@fluentui/react-components';
@@ -161,12 +161,10 @@ const ShortUrl: React.FC<IShortUrlProps> = ({ apiClient, isDarkTheme }) => {
     }
   };
 
-  const theme = getTheme();
-
   return (
     <FluentProvider theme={isDarkTheme ? webDarkTheme : webLightTheme}>
       <section className={styles.shortUrl}>
-        <Toolbar aria-label="Actions" style={{ boxShadow: theme.effects.elevation4 }}>
+        <Toolbar aria-label="Actions" style={{ boxShadow: tokens.shadow4 }}>
           <ToolbarButton onClick={openCreateDialog} icon={<AddSquare24Regular />}>
             Nouveau lien
           </ToolbarButton>
