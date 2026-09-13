@@ -1,9 +1,12 @@
+> [!IMPORTANT]
+> This repository is archived and no longer maintained. Development continues at [fboucher/AzUrlShortener](https://github.com/fboucher/AzUrlShortener) - please head over there for the latest updates, issues, and contributions.
+
 # Azure Url Shortener (AzUrlShortener)
 
-[![Deploy to Azure](https://img.shields.io/badge/Deploy%20To-Azure-blue?logo=microsoft-azure)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzUrlShortener%2Fmain%2Fsrc%2Fdeployment%2FazureDeploy.json)
-[![Serverless Library](https://img.shields.io/badge/Serverless%20Library-%E2%9C%94%EF%B8%8Fyes-blue?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAACx1BMVEUAAAAAAAAAAP8Af38AVaoAf78AVaoAbbYAXLkAc7kAZqoAWqUAY7gAZrIAZa4AYKwAY7QAZ7YAZ7MAZ7UAZLMAY7MAZLUAZrIAZLcAY7QAZrIAZLMAZLYAZ7YAZLYAZrcAZbgAZLMAZ7YAZbIAZLQAYrMAY7UAZLUAZLYAZbQAZrcAZbMAZbgAZbQAZrQAZrgAZrcAZbgAaLkAZbUAZbYAZ7YAZbUAZrUAZ7YAZ7cAZbcAZrcAZ7cAZrcAZ7cAZrcAZrcAZbcAZ7YAZ7cAZrcAZrYAZrcAZbYAZrcAZ7cAZrYAZrcAZrcAZ7cAZ7gAZrcAZrcAZ7cAZ7gAZ7gBaLcCaLcDabgEaLYFabUGarQGa7oHarMIbLoKbbsMbrsOb7wPcLwQcb0Rcb0SbawTcr0Xdb4Ydb8Zdr8dc6UeecEfdKQgcqMhe8Eic6IkdqEkfcIndJ4of8MqeJ0rgcQsdpsseZwxhMY2eZQ3iMc7fZI7gJJBjstCfYxGkcxHkcxMh4hNlc5TmM9VioFVmtBYnNFZnNFbndFbntFcntFcntJdn9Jfh3lhodNiodNnpNVopdVsi3Bsp9Ztj3BulXFuqdZuqddwqtd0mG11mG12j2l7mml9kWWGn2KMlluUpVmWpliaqFWpoEeusEivokOz0uq31Ou51eu61uy7pju81+2/2O3BqDfB2u7C2u7C2+7DqTbD2+7EuTrF3O/F3e/G3e/H3e/H3u/ItTbKqzLKuzbL4PDOsjDOvTTW5vTb6vXdwyrgsyPg7ffitCLk7/jm8PjqyCLq8/ns9PrttxrwuBjxuBfyzB3zvBfzzBzz+Pz0uRb1uRX1+fz2+v33+v34+/35uxL5/P36/P77wxP70Bf7/f78yhT8yxT8zBX8zRX8zhX8zxb80Bb8/f79vA/9vQ/9vhD9vxD9wBH9whH9xBL9xhP9xxP9yBOZ2sNJAAAAU3RSTlMAAQECAwQGBwsLDxESFCMlKSovOz1AQkNHSFBRUVFUVVpbW11gYmRlZmdoaWlqbXByc3V5e36AgYOIubrBysvR09XX2drd3ub2+vv7/Pz8/f7+/mxm4TkAAAHCSURBVHgBXcz1U1VBHEDxr90d2N2KLYbYAbZwVAzB7g6xOxS7OzCwu8UQFVtEBUMxWFeeoX+Ee5e5bxg+v56ZI155itesX80nl6STpYJ/EI5uzUplShsKtwVGP4+LexEff7hlQfHy7YKxU6kkrZ+NI7CsG2pj3VLql9YbgZ5lxCraHRjJDKW+an2qzwgg0A6zdQSWvhm/V6nf+tXkWS/nAi0ymFILWJEY0fuuSv6hd8H21wuA0qa0hrXvVzJHqb/6egiwKWERNBfJBxtM4IBSKfpJTEzM8b7rExbTOadUZNunCOj3UH3+6fF49NuZsC5xOT7SaOv3VcBCZSXpPRir3y2rIk1vx4YBS/ZHRh5SynMuBCP0wbE64jfl8clQrC3q39MJGGFno4dXlcqEPzqRmi4kp6yx4XT0UIpJAZgWe3QgMPbjn4M2nLk6hB65RdrDpHtRJu34dn8YMOj85cHgLyJ1gTF3jvTnxod5Trh0xQTKmZIjABh1MXzil30Y86Oc0CazGCWDcOy+OQBXp0JiNcZxbTpe1SVVRr9gmLoZV1df8SoRwOxebuhQRNLIXq8dVnCrGlklnfyVGjZpUD6vuP4DQn3cxeG842QAAAAASUVORK5CYII=)](https://serverlesslibrary.net/sample/1c809aa2-2d4f-4fee-bc27-0c2c36844ac8)
+![GitHub Release](https://img.shields.io/github/v/release/microsoft/AzUrlShortener)  ![.NET](https://img.shields.io/badge/10.0-512BD4?logo=dotnet&logoColor=fff) [![Build](https://github.com/microsoft/AzUrlShortener/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/microsoft/AzUrlShortener/actions/workflows/build.yml) ![GitHub License](https://img.shields.io/github/license/microsoft/AzUrlShortener) [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.gg/6zA3jKw)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -20,36 +23,36 @@ Features:
 - Budget-friendly and 100% open-source.
 - Extensible for more enterprise-friendly configurations
 - Simple step by step deployment. 
+  
 
 ## How To Deploy
 
-👉 **[Step by Step Deployment](https://github.com/microsoft/AzUrlShortener/wiki/How-to-deploy-your-AzUrlShortener)** (wiki pages) 👈 documentation is available here. If you would like to used the TinyBlazorAdmin as frontend (suggested) **you must first** follow the [steps to follow for TinyBlazorAdmin](https://github.com/microsoft/AzUrlShortener/wiki/How-to-deploy-TinyBlazorAdmin).
+👉 **[Step by Step Deployment](doc/how-to-deploy.md)** 👈 documentation is available here.
 
-If you want to **Update** or **Upgrade**, please refer to [this page](https://github.com/microsoft/AzUrlShortener/wiki/How-to-Update---Upgrade) (wiki pages). 
+If you want to **Update** or **Upgrade**, please refer to [the faq page](doc/faq.md). 
 
 ## How To Use It
 
-AzUrlShortener is an API that doesn't have any admin UI by default. There are many different ways to manage your Short Urls, from a direct HTTP call to a fancy website. 
+Once deployed, use the admin webApp (aka TinyBlazorAdmin) to create new short URLs. 
 
-We suggest [Tiny Blazor Admin](./src/Cloud5mins.ShortenerTools.TinyBlazorAdmin/README.md); it's a static website. 
+![Tiny Blazor Admin looks](images/tinyblazyadmin-tour.gif)
 
-![Tiny Blazor Admin looks](/Media/TinyBlazorAdmin.gif)
 
-By default, without any specific Admin tool, you can use an API client like [Postman](https://www.postman.com/) or a plugin to VSCode like [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client). We've included simple API calls via a postman collection and environment [here](./src/tools).
+### Alternative Admin Tool
 
-You can also directly update the tables in storage using [Azure Storage Explorer](https://github.com/microsoft/AzUrlShortener/wiki/How-to-Use-Azure-Storage-Explorer-as-Admin-Tools-for-AzUrlShortener). 
+By default, all the required resources are deployed into Azure. However you can decide to run the [API](src/Cloud5mins.ShortenerTools.Api/) locally, in a container or somewhere else. You can than use an API client like [Postman](https://www.postman.com/) or a plugin to VSCode like [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client), to manage your URLs. We've included simple API calls via a postman collection and environment [here](./src/tools/).
+
+You can also directly update the tables in storage using [Azure Storage Explorer](doc/how-to-use-azure-storage-explorer.md). 
 
 ---
 
-## How It Works
-
-If you are interested to learn more about what's under the hood, and get more details on each Azure Function, read the [How it works](https://github.com/microsoft/AzUrlShortener/wiki/how-it-works) page.
+## Videos
 
 There is also a videos that explains a bit how things works and does a quick tour of the project.
 
 | Cloud 5 Mins | Azure Friday |
 | ---          | --- |
-| [![Tiny Blazor Admin looks](/Media/AzUrlShortener_preview.gif)](https://youtu.be/fzXy2D77WMM) | [![Azure Friday](/Media/AzureFriday_preview.gif)](https://learn.microsoft.com/en-us/shows/azure-friday/azurlshortener-an-open-source-budget-friendly-url-shortener)  |
+| [![Tiny Blazor Admin looks](images/AzUrlShortener_preview.gif)](https://youtu.be/fzXy2D77WMM) | [![Azure Friday](/images/AzureFriday_preview.gif)](https://learn.microsoft.com/en-us/shows/azure-friday/azurlshortener-an-open-source-budget-friendly-url-shortener)  |
 
 
 ---
@@ -59,10 +62,9 @@ There is also a videos that explains a bit how things works and does a quick tou
 
 We are always trying to make it better. See the [AzUrlShortener project](https://github.com/users/FBoucher/projects/6/views/4) page and [issues](https://github.com/microsoft/AzUrlShortener/issues) to see the current progress. 
 
-You are invited to go into the [Discussion](https://github.com/microsoft/AzUrlShortener/discussions) tab to share your feedback, ask question, and suggest new feature!
+You are invited to go into the [Discussion](https://github.com/microsoft/AzUrlShortener/discussions) tab to share your feedback, ask question, and suggest new feature! Or have look at our [faq](doc/faq.md) page for more information.
 
 Current Backlog contains:
-- A deployment option with everything combined into TinyBlazorAdmin
 - More Statistics
 - QR Code
 - More tracking information (like Country)
@@ -117,6 +119,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ddematheu2"><img src="https://avatars.githubusercontent.com/u/43075365?v=4?s=100" width="100px;" alt="ddematheu2"/><br /><sub><b>ddematheu2</b></sub></a><br /><a href="https://github.com/microsoft/AzUrlShortener/issues?q=author%3Addematheu2" title="Bug reports">🐛</a> <a href="https://github.com/microsoft/AzUrlShortener/commits?author=ddematheu2" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://davidop.code.blog/"><img src="https://avatars.githubusercontent.com/u/7433346?v=4?s=100" width="100px;" alt="David Oliva Paredes"/><br /><sub><b>David Oliva Paredes</b></sub></a><br /><a href="https://github.com/microsoft/AzUrlShortener/commits?author=davidop" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://blog.sonnes.cloud"><img src="https://avatars.githubusercontent.com/u/49366751?v=4?s=100" width="100px;" alt="Michael Morten Sonne &#124; Microsoft MVP"/><br /><sub><b>Michael Morten Sonne &#124; Microsoft MVP</b></sub></a><br /><a href="https://github.com/microsoft/AzUrlShortener/issues?q=author%3Amichaelmsonne" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
@@ -133,9 +136,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 > This project was inspired by a project created by [Jeremy Likness](https://github.com/JeremyLikness) that you can find here [jlik.me](https://github.com/JeremyLikness/jlik.me).
 
 
-[UrlShortener]: https://github.com/microsoft/AzUrlShortener/raw/main/Media/UrlShortener_600.png
-[ThumbnailYTAzUrlShortener_EN]: https://github.com/microsoft/AzUrlShortener/raw/main/Media/ThumbnailYTAzUrlShortener_EN.png
-[glo]: https://github.com/microsoft/AzUrlShortener/raw/main/Media/glo-board_screenshot.png
-[AzFunctionGitSync]: https://github.com/microsoft/AzUrlShortener/raw/main/Media/AzFunctionGitSync.png
-
-
+[UrlShortener]: images/UrlShortener_600.png
