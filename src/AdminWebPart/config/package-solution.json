@@ -35,7 +35,7 @@
     ],
     "webApiPermissionRequests": [
       {
-        "resource": "AMVCC Back-office (Teams)",
+        "resource": "AMVCC URL Shortener API",
         "scope": "access_as_user"
       }
     ]

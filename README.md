@@ -43,7 +43,7 @@ protected administration API.
 
 By default, the redirect Function and protected administration API are deployed
 to Azure. The API requires an Entra access token carrying the `access_as_user`
-scope and `admin` app role. The included Postman collection can still be used
+scope and `UrlAdmin` app role. The included Postman collection can still be used
 when configured with a valid bearer token.
 
 You can also directly update the tables in storage using [Azure Storage Explorer](doc/how-to-use-azure-storage-explorer.md). 
