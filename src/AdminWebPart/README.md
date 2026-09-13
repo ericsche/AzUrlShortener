@@ -31,12 +31,11 @@ permission in the SharePoint admin center.
 
 ## Build
 
-SPFx 1.20.1 requires Node.js 18.
+SPFx 1.23.2 requires Node.js 22.
 
 ```powershell
 npm ci
-npx gulp bundle --ship
-npx gulp package-solution --ship
+npm run build
 ```
 
 The SharePoint package is generated at

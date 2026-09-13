@@ -38,7 +38,7 @@ jobs:
     - name: Set up Node.js for SPFx
       uses: actions/setup-node@1e60f620b9541d13bece96c5465dc8ee9832be0b # v4.0.3
       with:
-        node-version: '18.20.8'
+        node-version: '22.x'
         cache: npm
         cache-dependency-path: src/AdminWebPart/package-lock.json
 
@@ -48,6 +48,4 @@ jobs:
 
     - name: Build SPFx administration web part
       working-directory: src/AdminWebPart
-      env:
-        BROWSERSLIST_IGNORE_OLD_DATA: 'true'
-      run: npx gulp bundle --ship --no-color
+      run: npm run build

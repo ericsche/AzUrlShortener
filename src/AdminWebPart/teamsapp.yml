@@ -13,14 +13,10 @@ deploy:
     with:
       workingDirectory: .
       args: ci --no-audit
-  - uses: cli/runNpxCommand
+  - uses: cli/runNpmCommand
     with:
       workingDirectory: .
-      args: gulp bundle --ship --no-color
-  - uses: cli/runNpxCommand
-    with:
-      workingDirectory: .
-      args: gulp package-solution --ship --no-color
+      args: run build
   - uses: spfx/deploy
     with:
       createAppCatalogIfNotExist: false
