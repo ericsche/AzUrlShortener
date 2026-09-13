@@ -22,7 +22,7 @@ It was consolidated from
      `https://contoso.sharepoint.com`
 4. In `config/package-solution.json`, make sure the resource name matches the
    Entra enterprise application's display name.
-5. Set the dedicated ShortUrl API Application ID URI in
+5. The dedicated `AMVCC URL Shortener API` Application ID URI is configured in
    `src/webparts/shortUrl/ApiConfiguration.ts`.
 
 The API URL and resource URI are deliberately compiled into the bundle as one
