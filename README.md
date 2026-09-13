@@ -33,14 +33,18 @@ If you want to **Update** or **Upgrade**, please refer to [the faq page](doc/faq
 
 ## How To Use It
 
-Once deployed, use the admin webApp (aka TinyBlazorAdmin) to create new short URLs. 
-
-![Tiny Blazor Admin looks](images/tinyblazyadmin-tour.gif)
+Administration is provided by the SharePoint Framework web part in
+[`src/AdminWebPart`](src/AdminWebPart/). It runs in SharePoint and as a personal
+tab in Microsoft Teams, using the signed-in user's Entra identity to call the
+protected administration API.
 
 
 ### Alternative Admin Tool
 
-By default, all the required resources are deployed into Azure. However you can decide to run the [API](src/Cloud5mins.ShortenerTools.Api/) locally, in a container or somewhere else. You can than use an API client like [Postman](https://www.postman.com/) or a plugin to VSCode like [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client), to manage your URLs. We've included simple API calls via a postman collection and environment [here](./src/tools/).
+By default, the redirect Function and protected administration API are deployed
+to Azure. The API requires an Entra access token carrying the `access_as_user`
+scope and `UrlAdmin` app role. The included Postman collection can still be used
+when configured with a valid bearer token.
 
 You can also directly update the tables in storage using [Azure Storage Explorer](doc/how-to-use-azure-storage-explorer.md). 
 
@@ -52,7 +56,7 @@ There is also a videos that explains a bit how things works and does a quick tou
 
 | Cloud 5 Mins | Azure Friday |
 | ---          | --- |
-| [![Tiny Blazor Admin looks](images/AzUrlShortener_preview.gif)](https://youtu.be/fzXy2D77WMM) | [![Azure Friday](/images/AzureFriday_preview.gif)](https://learn.microsoft.com/en-us/shows/azure-friday/azurlshortener-an-open-source-budget-friendly-url-shortener)  |
+| [![AzUrlShortener demo](images/AzUrlShortener_preview.gif)](https://youtu.be/fzXy2D77WMM) | [![Azure Friday](/images/AzureFriday_preview.gif)](https://learn.microsoft.com/en-us/shows/azure-friday/azurlshortener-an-open-source-budget-friendly-url-shortener)  |
 
 
 ---

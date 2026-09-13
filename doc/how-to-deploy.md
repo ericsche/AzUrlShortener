@@ -58,29 +58,20 @@ After a few seconds, you should now be in your version of the AzUrlShortener pro
 	You will be asked where to deploy Azure Subscription and location select what make sense for you. You will be asked two more information:
 	- **The Custom domain**: This should be the complete (including the https part) domain name for your short URLs ex: https://c5m.ca.
 	- **Default Redirect Url**: This is the URL used if the vanity doesn't exist, or if no vanity is used. It must include the https part.
+	- **Entra tenant ID**: Tenant containing the API registration and administrators.
+	- **API client ID**: Client ID of the Entra application exposing `access_as_user`.
+	- **SharePoint origin**: Tenant origin allowed by CORS, for example `https://contoso.sharepoint.com`.
 
 1. Get the application URL
 
-After the deployment is complete, you will see the URLs of your applications in the terminal; the one starting by `https://admin` is the admin tools (aka TinyBlazorAdmin), and the one starting with `https://azfunc-light` is the redicrect service. There is also many details about the resources created in Azure, and a link to the Aspire dashboard.
+After deployment, `azd` displays the public redirect Function URL and the
+protected administration API URL. Configure that API URL and its Entra
+Application ID URI in the SPFx web part manifest.
 
 ![azd deployment result](../images/deployment-result.png)
 
-## Add authentication to the admin website
+## Deploy the administration web part
 
-The app is now deployed, but it does not have authentication enabled. Navigate to the [Azure Portal](https://portal.azure.com/), and find the Resource Group you just deployed (e.g., rg-azUrl-dev). From there, select the Container App named **admin**.
-
-![select the Container App admin](../images/select-admin-container-app.png)
-
-From the left menu, select **Authentication** and click **Add identity provider**.
-
-![select Authentication](../images/auth-and-provider.png)
-
-You can choose between multiple providers, but let's use Microsoft since it's deployed in Azure and you are already logged in. Once Microsoft is chosen, you will see many configuration options. Select the recommended client secret expiration (e.g., 180 days).
-
-You can keep all the other default settings. Click **Add**. After a few seconds, you should see a notification in the top right corner that the identity provider was added successfully.
-
-Voila! Your app now has authentication.
-
-Next time you navigate to the app, you will be prompted to log in with your Microsoft account. Notice that your entire app is protected. No page is accessible without authentication.
-
-The first time you log in, you will see a Permissions requested screen. Check the **Consent** checkbox, and click **Accept**.
+Follow [`src/AdminWebPart/README.md`](../src/AdminWebPart/README.md) to configure
+the Entra scope and role, build the `.sppkg`, deploy it to the SharePoint app
+catalog, approve its API permission, and publish the Teams personal tab.

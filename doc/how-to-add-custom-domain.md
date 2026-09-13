@@ -8,8 +8,7 @@ From the left menu, select **Custom domains** and click on **Add custom domain**
 
 Follow the instructions to add your custom domain. Note that it may takes a few minutes for the domain to all be setup. Once it is, you should see the domain listed in the custom domains list withthe green check mark.
 
-
-## Add a custom domain to the admin website
-
-To make it easier to find the TinyBlazorAdmin website, you can also add a custom domain to it. From your Domain provider (GoDaddy, NameCheap, etc.), you can set a forwarding subdomain to the admin website. For example, if you want to use `admin.yourdomain.com`, you can set a forwarding rule to the URL of the admin website (e.g., `https://admin-azfunc-light.azurecontainerapps.io`). This way, you can access the TinyBlazorAdmin website using your custom domain.
-
+The administration interface is hosted by SharePoint, so it does not need a
+separate custom domain. If the administration API domain changes, update the
+web part's `apiBaseUrl` property and keep the SharePoint origin in the API CORS
+configuration.

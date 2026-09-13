@@ -1,0 +1,54 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "id": "${{TEAMS_APP_ID}}",
+    "version": "1.1.0",
+    "isFullScreen": true,
+    "developer": {
+        "name": "AMVCC",
+        "websiteUrl": "https://www.amvcc.com",
+        "privacyUrl": "https://www.amvcc.com",
+        "termsOfUseUrl": "https://www.amvcc.com"
+    },
+    "name": {
+        "short": "Liens courts${{APP_NAME_SUFFIX}}",
+        "full": "Administration des liens courts AMVCC"
+    },
+    "description": {
+        "short": "Administration sécurisée des liens courts AMVCC",
+        "full": "Créer, modifier et archiver les liens courts AMVCC depuis SharePoint ou Microsoft Teams."
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "accentColor": "#004578",
+    "staticTabs": [
+        {
+            "entityId": "4bbafe50-8842-4630-b2fb-463334ac9d61",
+            "name": "Liens courts",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/TeamsWorkBench.aspx%3FcomponentId=4bbafe50-8842-4630-b2fb-463334ac9d61%26teams%26personal%26forceLocale={locale}%26loadSPFX%3Dtrue%26debugManifestsFile%3Dhttps%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js",
+            "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "*.login.microsoftonline.com",
+        "*.sharepoint.com",
+        "*.sharepoint-df.com",
+        "spoppe-a.akamaihd.net",
+        "spoprod-a.akamaihd.net",
+        "resourceseng.blob.core.windows.net",
+        "msft.spoppe.com"
+    ],
+    "webApplicationInfo": {
+        "resource": "https://{teamSiteDomain}",
+        "id": "00000003-0000-0ff1-ce00-000000000000"
+    }
+}

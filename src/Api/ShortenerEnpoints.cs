@@ -10,7 +10,8 @@ public static class ShortenerEnpoints
 {
     public static void MapShortenerEnpoints(this IEndpointRouteBuilder app)
     {
-        var endpoints = app.MapGroup("api");
+        var endpoints = app.MapGroup("api")
+            .RequireAuthorization("UrlAdmin");
 
         // GETS
 

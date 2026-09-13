@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "ShortURLAdm",
+    "environment": "spo",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "ShortUrl",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.3",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "short-url-adm",
+    "libraryId": "8ac5879e-b43b-4cd3-8fda-ad9a31110a08",
+    "packageManager": "npm",
+    "solutionShortDescription": "ShortURLAdm description"
+  }
+}

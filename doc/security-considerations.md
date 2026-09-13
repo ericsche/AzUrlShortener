@@ -1,20 +1,18 @@
-# Security Responsibilities
+# Security responsibilities
 
-This is open-source software and delivered as a Proof-of-concept. Please consider which security approaches is appropriate for your use case.
+The redirect Function remains anonymous because browsers must be able to follow
+short links. Administration operations are hosted by the separate API and are
+protected by Microsoft Entra ID.
 
-## Current Implementation 
+The SharePoint Framework web part uses `AadHttpClient` to obtain a delegated
+access token for the signed-in SharePoint or Teams user. The API requires:
 
-The [TinyBlazorAdmin](../src/TinyBlazorAdmin/) is secured using the built-in authentication feature of Azure Container Apps (ACA) is a simple and powerful way to add authentication your applications with minimal effort. Here are some key points to remember:
+- the `access_as_user` delegated scope;
+- the `UrlAdmin` app role;
+- an allowed SharePoint origin configured through CORS.
 
-- You don't need to change the existing app code to add this authentication feature.
-- This built-in authentication feature of ACA protects your entire application, not individual pages.
+Assign `UrlAdmin` to a security or Microsoft 365 group. Distribution lists do
+not emit the `roles` claim and will result in HTTP 403 responses.
 
-For more details about the built-in authentication feature of ACA, see [Authentication and authorization in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/authentication).
-
-## Basic Security Approaches
-
-Using Azure Container Apps (ACA), the API container will only be accessible from the TinyBlazorAdmin and won't be exposed to the Internet. As a bonus, since TinyBlazorAdmin and the API are now running inside containers, you could also decide to run them locally.
-
-The storage access got also a security upgrade. Instead of using a connection string, I will be using a Managed Identity to access the Azure Storage Table. This is a much more secure way to access Azure resources, and thanks to Aspire, it is also very easy to implement.
-
-For more details about Security read the [SECURITY.md](../SECURITY.md) file.
+Never embed a Function key, client secret, or bearer token in the SPFx bundle.
+The API continues to use managed identity for Azure Storage access.

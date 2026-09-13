@@ -1,0 +1,24 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.shortUrl {
+  overflow-x: auto;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+}
+
+.error {
+  color: "[theme:errorText, default: #a4262c]";
+  margin: 1em 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.5rem;
+  min-width: min(32rem, 80vw);
+}

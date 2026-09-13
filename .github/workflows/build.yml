@@ -34,3 +34,20 @@ jobs:
 
     - name: Build solution
       run: dotnet build src/AzUrlShortener.sln --no-restore --configuration Release
+
+    - name: Set up Node.js for SPFx
+      uses: actions/setup-node@1e60f620b9541d13bece96c5465dc8ee9832be0b # v4.0.3
+      with:
+        node-version: '18.20.8'
+        cache: npm
+        cache-dependency-path: src/AdminWebPart/package-lock.json
+
+    - name: Install SPFx dependencies
+      working-directory: src/AdminWebPart
+      run: npm ci --no-audit
+
+    - name: Build SPFx administration web part
+      working-directory: src/AdminWebPart
+      env:
+        BROWSERSLIST_IGNORE_OLD_DATA: 'true'
+      run: npx gulp bundle --ship --no-color

@@ -13,10 +13,10 @@ properties:
       dotnet:
         autoConfigureDataProtection: true
     ingress:
-      external: false
+      external: true
       targetPort: {{ targetPortOrDefault 8080 }}
       transport: http
-      allowInsecure: true
+      allowInsecure: false
     registries:
       - server: {{ .Env.AZURE_CONTAINER_REGISTRY_ENDPOINT }}
         identity: {{ .Env.AZURE_CONTAINER_REGISTRY_MANAGED_IDENTITY_ID }}
@@ -34,8 +34,12 @@ properties:
             value: "true"
           - name: CustomDomain
             value: '{{ parameter "CustomDomain" }}'
-          - name: DefaultRedirectUrl
-            value: '{{ parameter "DefaultRedirectUrl" }}'
+          - name: AzureAd__TenantId
+            value: '{{ parameter "EntraTenantId" }}'
+          - name: AzureAd__ClientId
+            value: '{{ parameter "ApiClientId" }}'
+          - name: Cors__AllowedOrigins__0
+            value: '{{ parameter "SharePointOrigin" }}'
           - name: HTTP_PORTS
             value: '{{ targetPortOrDefault 0 }}'
           - name: OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY
