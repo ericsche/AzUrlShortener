@@ -19,6 +19,7 @@ import {
   Label,
   Link,
   Spinner,
+  type SortDirection,
   Table,
   TableBody,
   TableCell,
@@ -37,6 +38,7 @@ import styles from './ShortUrl.module.scss';
 import { IShortUrlProps, IShortUrlRequest, IUrlInfo } from './IShortUrlProps';
 
 type DialogMode = 'create' | 'edit' | undefined;
+type SortColumn = 'title' | 'shortUrl';
 
 interface IEditorState {
   title: string;
@@ -58,6 +60,18 @@ const ShortUrl: React.FC<IShortUrlProps> = ({ apiClient, isDarkTheme }) => {
   const [dialogMode, setDialogMode] = React.useState<DialogMode>();
   const [selectedUrl, setSelectedUrl] = React.useState<IUrlInfo>();
   const [editor, setEditor] = React.useState<IEditorState>(emptyEditor);
+  const [sortColumn, setSortColumn] = React.useState<SortColumn>('title');
+  const [sortDirection, setSortDirection] = React.useState<SortDirection>('ascending');
+
+  const sortedUrls = React.useMemo(() => {
+    const direction = sortDirection === 'ascending' ? 1 : -1;
+
+    return [...urls].sort((left, right) => {
+      const leftValue = sortColumn === 'title' ? left.title : left.shortUrl;
+      const rightValue = sortColumn === 'title' ? right.title : right.shortUrl;
+      return leftValue.localeCompare(rightValue, 'fr', { sensitivity: 'base' }) * direction;
+    });
+  }, [sortColumn, sortDirection, urls]);
 
   const loadUrls = React.useCallback(async (): Promise<void> => {
     setLoading(true);
@@ -161,6 +175,18 @@ const ShortUrl: React.FC<IShortUrlProps> = ({ apiClient, isDarkTheme }) => {
     }
   };
 
+  const toggleSort = (column: SortColumn): void => {
+    if (sortColumn === column) {
+      setSortDirection(current =>
+        current === 'ascending' ? 'descending' : 'ascending'
+      );
+      return;
+    }
+
+    setSortColumn(column);
+    setSortDirection('ascending');
+  };
+
   return (
     <FluentProvider theme={isDarkTheme ? webDarkTheme : webLightTheme}>
       <section className={styles.shortUrl}>
@@ -179,14 +205,25 @@ const ShortUrl: React.FC<IShortUrlProps> = ({ apiClient, isDarkTheme }) => {
           <Table aria-label="Liens courts">
             <TableHeader>
               <TableRow>
-                <TableHeaderCell>Titre</TableHeaderCell>
-                <TableHeaderCell>Lien court</TableHeaderCell>
-                <TableHeaderCell>URL cible</TableHeaderCell>
-                <TableHeaderCell>Actions</TableHeaderCell>
+                <TableHeaderCell
+                  sortable
+                  sortDirection={sortColumn === 'title' ? sortDirection : undefined}
+                  onClick={() => toggleSort('title')}
+                >
+                  Titre
+                </TableHeaderCell>
+                <TableHeaderCell
+                  sortable
+                  sortDirection={sortColumn === 'shortUrl' ? sortDirection : undefined}
+                  onClick={() => toggleSort('shortUrl')}
+                >
+                  Lien court
+                </TableHeaderCell>
+                <TableHeaderCell className={styles.actionsHeader}>Actions</TableHeaderCell>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {urls.map(item => (
+              {sortedUrls.map(item => (
                 <TableRow key={item.rowKey}>
                   <TableCell>
                     <TableCellLayout>{item.title}</TableCellLayout>
@@ -197,9 +234,6 @@ const ShortUrl: React.FC<IShortUrlProps> = ({ apiClient, isDarkTheme }) => {
                         {item.shortUrl}
                       </Link>
                     </TableCellLayout>
-                  </TableCell>
-                  <TableCell>
-                    <TableCellLayout>{item.url}</TableCellLayout>
                   </TableCell>
                   <TableCell>
                     <div className={styles.actions}>

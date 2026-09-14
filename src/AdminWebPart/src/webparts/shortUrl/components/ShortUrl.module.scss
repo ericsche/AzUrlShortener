@@ -13,6 +13,12 @@
 .actions {
   display: flex;
   gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+.actionsHeader {
+  text-align: right;
+  width: 8rem;
 }
 
 .form {
