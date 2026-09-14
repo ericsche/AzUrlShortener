@@ -18,6 +18,8 @@ solution
 temp
 *.sppkg
 .heft
+appPackage/build
+env/.env.*.user
 
 # Coverage directory used by tools like istanbul
 coverage

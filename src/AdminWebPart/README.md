@@ -45,3 +45,21 @@ npm run build
 The SharePoint package is generated at
 `sharepoint\solution\short-url-adm.sppkg`. Teams Toolkit uses
 `teamsapp.yml` to package and publish the Teams personal tab.
+
+## Teams application
+
+The production Teams application is tracked by `env/.env.prod`:
+
+- Teams manifest ID: `f3c05d79-2273-4c52-a6a6-c4d5cbdf93c3`
+- Microsoft 365 title ID: `U_3e3b8a1a-e97d-6b56-1de5-20df18b05ad0`
+
+Update or publish it with:
+
+```powershell
+atk provision --env prod
+atk deploy --env prod
+atk publish --env prod
+```
+
+The `.env.prod.user` file contains local account state and must never be
+committed.
